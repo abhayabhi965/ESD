@@ -17,6 +17,8 @@ from flask import Flask, request
 
 df = pd.read_csv("spam.csv", encoding="latin1")
 
+nltk.download('stopwords')
+
 stemmer = PorterStemmer()
 stop_words = set(stopwords.words('english'))
 
